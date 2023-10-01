@@ -4,6 +4,8 @@
  */
 package demoprojectgithub;
 
+import java.util.Scanner;
+
 /**
  *
  * @author tarqu
@@ -20,7 +22,8 @@ public class DemoProjectGitHub {
         System.out.print("Please enter a number: ");
         int userInput = MyKB.nextInt();
         
-        
+        System.out.println("You entered: " + userInput);
+
     }
     
 }

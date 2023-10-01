@@ -16,14 +16,16 @@ public class DemoProjectGitHub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // A small program which will take an input
+          
         Scanner MyKB = new Scanner(System.in);
 
         System.out.print("Please enter a number: ");
-        int userInput = MyKB.nextInt();
-        
-        System.out.println("You entered: " + userInput);
 
+        if (MyKB.hasNextInt()) {
+            int userInput = MyKB.nextInt();
+            System.out.println("You entered: " + userInput);
+        } else {
+            System.out.println("Error: Invalid input. Please enter a valid integer.");
+        }
     }
-    
 }

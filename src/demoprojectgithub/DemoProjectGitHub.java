@@ -17,15 +17,23 @@ public class DemoProjectGitHub {
      */
     public static void main(String[] args) {
           
-        Scanner MyKB = new Scanner(System.in);
+         Scanner MyKB = new Scanner(System.in);
 
-        System.out.print("Please enter a number: ");
+        while (true) {
+            System.out.print("Please enter a number (or 'q' to quit): ");
 
-        if (MyKB.hasNextInt()) {
-            int userInput = MyKB.nextInt();
-            System.out.println("You entered: " + userInput);
-        } else {
-            System.out.println("Error: Invalid input. Please enter a valid integer.");
+            if (MyKB.hasNextInt()) {
+                int userInput = MyKB.nextInt();
+                System.out.println("You entered: " + userInput);
+            } else {
+                String input = MyKB.next();
+                if (input.equals("q")) {
+                    System.out.println("Exiting program. Goodbye!");
+                    break;
+                } else {
+                    System.out.println("Error: Invalid input. Please enter a valid integer or 'q' to quit.");
+                }
+            }
         }
     }
 }
